@@ -148,6 +148,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         }
 
         let menu = NSMenu()
+        menu.addItem(NSMenuItem(title: "About SwipeToVSCode", action: #selector(showAbout), keyEquivalent: ""))
+        menu.addItem(NSMenuItem.separator())
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(quit), keyEquivalent: "q"))
         statusItem.menu = menu
     }
@@ -591,6 +593,24 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private func debugLog(_ message: String) {
         guard debugLogging else { return }
         log(message)
+    }
+
+    @objc private func showAbout() {
+        let alert = NSAlert()
+        alert.messageText = "About SwipeToVSCode"
+        alert.informativeText = """
+        Three-finger swipe back/forward for VS Code on macOS.
+
+        Written by Codex.
+        Directed by James Hutchison.
+
+        Licensed under the MIT License.
+
+        Want to configure it? Have AI go change the code.
+        """
+        alert.alertStyle = .informational
+        alert.addButton(withTitle: "OK")
+        alert.runModal()
     }
 
     @objc private func quit() {
