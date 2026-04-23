@@ -26,5 +26,4 @@ launchctl bootstrap "gui/$(id -u)" "$INSTALLED_PLIST"
 launchctl enable "$SERVICE"
 
 echo "Installed $LABEL"
-echo "Logs: /tmp/swipetovscode.log and /tmp/swipetovscode.err"
 echo "If shortcuts do not post, enable your Terminal app in System Settings > Privacy & Security > Accessibility, then run ./install.sh again."

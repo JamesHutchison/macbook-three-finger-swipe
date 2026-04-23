@@ -29,13 +29,6 @@ This installs a user LaunchAgent at:
 ~/Library/LaunchAgents/com.jameshutchison.swipetovscode.plist
 ```
 
-Logs are written to:
-
-```text
-/tmp/swipetovscode.log
-/tmp/swipetovscode.err
-```
-
 If the LaunchAgent starts but shortcuts do not post, open `System Settings > Privacy & Security > Accessibility` and make sure the relevant runner is enabled. Depending on how you launched it, macOS may list your terminal app, VS Code, or `swift`.
 
 ## Uninstall

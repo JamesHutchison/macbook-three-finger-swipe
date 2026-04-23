@@ -15,11 +15,5 @@
 
     <key>KeepAlive</key>
     <true/>
-
-    <key>StandardOutPath</key>
-    <string>/tmp/swipetovscode.log</string>
-
-    <key>StandardErrorPath</key>
-    <string>/tmp/swipetovscode.err</string>
 </dict>
 </plist>
